@@ -91,3 +91,12 @@ _context: |
   - context/realtor-profile.md — bio, brokerage, MLS, voice/tone
   - context/market-context.md — farm areas, price ranges, property types
   - context/client-roster.md — active buyers/sellers and their criteria
+
+  CRITICAL — Onboarding Detection:
+  On EVERY incoming message, check PostgreSQL onboarding_state for this user:
+    SELECT current_step, completed_steps FROM onboarding_state WHERE user_id = '{telegram_user_id}'
+  If no row → FIRST CONTACT → load the onboarding skill and start at step 1.
+  If current_step != 'done' → resume onboarding at that step.
+  If current_step = 'done' → normal operations.
+  While onboarding, never list skills or capabilities. One question at a time.
+  Speak in benefits, not features. The user is non-technical.
