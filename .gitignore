@@ -22,3 +22,4 @@ logs/
 
 # Database
 *.sqlite
+credentials/google_client_secret.json
