@@ -48,6 +48,7 @@ timezone: "America/Chicago"
 
 telegram:
   reactions: true
+  bot_token: "{{BOT_TOKEN}}"
 
 cron:
   wrap_response: true
