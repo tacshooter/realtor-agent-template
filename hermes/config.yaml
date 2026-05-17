@@ -3,12 +3,17 @@
 # Replace {{PLACEHOLDER}} values before deployment
 
 model:
-  default: deepseek/deepseek-v4-pro
-  provider: deepseek
-  base_url: https://api.deepseek.com
+  # DeepSeek V4 Flash via OpenRouter — free tier, no per-token cost.
+  # To upgrade: change model name to deepseek/deepseek-chat or anthropic/claude-sonnet-4
+  default: deepseek/deepseek-v4-flash:free
+  provider: openrouter
 
 providers: {}
 fallback_providers: []
+
+# ── API Keys ──────────────────────────────────────────────────
+# OpenRouter and Firecrawl keys are injected by provision-realtor.sh.
+# No realtor signup needed for anything.
 
 toolsets:
   - hermes-telegram
