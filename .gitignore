@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.libretto/
+
+# Environment (credentials — NEVER commit)
+.env
+*.env.local
+
+# Libretto sessions (contain auth cookies)
+.libretto/sessions/
+
+# Playwright browsers
+.ms-playwright/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database
+*.sqlite

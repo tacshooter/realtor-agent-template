@@ -1,0 +1,17 @@
+{
+  "name": "realtor-agent-libretto",
+  "version": "1.0.0",
+  "description": "Libretto browser automation workflows for Realtor Assistant",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "login": "libretto run src/workflows/mls-login.ts",
+    "search": "libretto run src/workflows/search-listings.ts",
+    "tax": "libretto run src/workflows/pull-tax-records.ts",
+    "comps": "libretto run src/workflows/gather-comps.ts",
+    "deploy": "libretto cloud deploy ."
+  },
+  "dependencies": {
+    "libretto": "^0.6.16"
+  }
+}
