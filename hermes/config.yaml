@@ -13,6 +13,21 @@ fallback_providers: []
 toolsets:
   - hermes-telegram
 
+# Strip tools that don't apply to a realtor agent
+# Keeps context windows lean. Remove from this list to re-enable.
+disabled_toolsets:
+  - image_gen        # No image generation needed
+  - spotify          # No music control needed
+  - homeassistant    # No smart home control
+  - discord          # No Discord
+  - discord_admin    # No Discord admin
+  - yuanbao          # No Yuanbao
+  - feishu_doc       # No Feishu/Lark
+  - feishu_drive     # No Feishu/Lark
+  - tts              # No text-to-speech
+  - rl               # No RL training
+  - moa              # No Mixture of Agents
+
 agent:
   max_turns: 60
   gateway_timeout: 1800
