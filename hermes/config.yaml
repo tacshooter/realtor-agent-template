@@ -75,6 +75,15 @@ skills:
   external_dirs:
     - /opt/realtor-agent/skills
 
+# ── Web Search / Extract ──────────────────────────────────────
+# web_search and web_extract require one of these API keys:
+#   EXA_API_KEY | PARALLEL_API_KEY | FIRECRAWL_API_KEY | TAVILY_API_KEY
+# Without one, agents fall back to DDG search (search only, no extract).
+#
+# Firecrawl free tier: 500 credits/month — sufficient for a single realtor.
+# Sign up at https://firecrawl.dev, get key, paste below.
+# Set in .env: FIRECRAWL_API_KEY=fc-xxxxxxxxxxxx
+
 _context: |
   The agent's context files live in /opt/realtor-agent/context/.
   Load these files to understand {{REALTOR_NAME}}'s market, specialties, and active clients.
